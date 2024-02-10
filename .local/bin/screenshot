@@ -1,0 +1,22 @@
+#!/bin/sh
+
+window=$(hyprctl activewindow -j)
+
+position=$(echo $window | jq -r '.at | @sh' | tr -d "'")
+IFS=' ' read -r position_x position_y <<- EOF
+  $position
+EOF
+
+size=$(echo $window | jq -r '.size | @sh' | tr -d "'")
+IFS=' ' read -r size_x size_y <<- EOF
+  $size
+EOF
+
+gaps=$(hyprctl getoption -j general:gaps_in | jq -r '.int')
+
+position_x=$((position_x - gaps))
+position_y=$((position_y - gaps))
+size_x=$((size_x + 2 * gaps))
+size_y=$((size_y + 2 * gaps))
+
+grim -g "${position_x},${position_y} ${size_x}x${size_y}" - | wl-copy -t image/png

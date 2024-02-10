@@ -1,0 +1,10 @@
+#!/bin/sh
+
+chosen=$(printf "Power Off\nRestart\nLog Out\nLock" | rofi -dmenu)
+
+case "$chosen" in
+  "Power Off") sudo shutdown now ;;
+  "Restart") sudo reboot ;;
+  "Log Out") hyprctl dispatch exit ;;
+  "Lock") swaylock ;;
+esac

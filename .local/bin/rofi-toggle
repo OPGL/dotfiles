@@ -1,0 +1,9 @@
+#!/bin/sh
+
+rofi=$(pgrep -x rofi)
+
+if [ -z $rofi ]; then
+    rofi -show drun &
+else
+    kill $rofi
+fi

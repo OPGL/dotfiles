@@ -1,0 +1,11 @@
+configuration {
+  display-drun: "Applications:";
+  display-emoji: "Emojis:";
+  display-calc: "Calculate:";
+  display-clip: "Clipboard:";
+  drun-display-format: "{name}";
+  font: "FiraMono Nerd Font Medium 10";
+  modi: "drun";
+}
+
+@theme "~/.config/rofi/theme.rasi"

@@ -1,0 +1,10 @@
+#!/bin/sh
+
+key=$1
+input=$2
+tmp=/tmp/$USER/$(uuidgen | cut -d '-' -f 1)
+output=$tmp.${input##*.}.gpg
+
+ef $key $input $tmp
+curl -F "file=@$output" 0x0.st
+rm $output
