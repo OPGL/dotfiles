@@ -1,25 +1,12 @@
 {
     "layer": "top",
     "position": "top",
-    "height": 30,
-    "spacing": 4, // Gaps between modules (4px)
+    "height": 36,
+    "spacing": 0, // Gaps between modules (4px)
     // Choose the order of the modules
-    "modules-left": ["clock", "mpd"],
+    "modules-left": ["clock"],
     "modules-center": ["hyprland/workspaces"],
     "modules-right": ["pulseaudio", "network", "cpu", "memory", "temperature", "tray"],
-    "mpd": {
-        "format": "{stateIcon} {artist} - {album} - {title} ({elapsedTime:%M:%S}/{totalTime:%M:%S}) ⸨{songPosition}|{queueLength}⸩ {volume}% ",
-        "format-disconnected": "Disconnected ",
-        "format-stopped": "Stopped ",
-        "unknown-tag": "N/A",
-        "interval": 2,
-        "state-icons": {
-            "paused": "",
-            "playing": ""
-        },
-        "tooltip-format": "MPD (connected)",
-        "tooltip-format-disconnected": "MPD (disconnected)"
-    },
     "tray": {
         // "icon-size": 21,
         "spacing": 10
