@@ -6,7 +6,7 @@
     // Choose the order of the modules
     "modules-left": ["clock"],
     "modules-center": ["hyprland/workspaces"],
-    "modules-right": ["pulseaudio", "network", "cpu", "memory", "temperature", "tray"],
+    "modules-right": ["tray", "pulseaudio", "network", "cpu", "memory", "temperature"],
     "tray": {
         // "icon-size": 21,
         "spacing": 10
