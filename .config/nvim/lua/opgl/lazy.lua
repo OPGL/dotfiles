@@ -22,7 +22,14 @@ local plugins = {
 {"folke/tokyonight.nvim"},
 {"nvim-treesitter/nvim-treesitter"},
 {"nvim-lua/plenary.nvim"},
-{"nvim-telescope/telescope.nvim"}
+{"nvim-telescope/telescope.nvim"},
+{'romgrk/barbar.nvim',
+    dependencies = {
+      'lewis6991/gitsigns.nvim', -- OPTIONAL: for git status
+      'nvim-tree/nvim-web-devicons', -- OPTIONAL: for file icons	
+      }
+},
+{"nvim-tree/nvim-tree.lua"}
 }
 
 require("lazy").setup(plugins)
